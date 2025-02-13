@@ -1,0 +1,438 @@
+/* style.css */
+
+/* Basic Reset and General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333; /* Dark header background */
+    color: #fff; /* White text in header */
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Space out name and navigation */
+    align-items: center; /* Vertically align items in header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove bullet points from navigation list */
+    display: flex; /* Arrange navigation links horizontally */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove underlines from links */
+    padding: 0.5rem 1rem;
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+header nav ul li a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+.header-logo {
+    max-height: 50px; /* Adjust the maximum height of the logo as needed */
+    margin-right: 15px; /* Add some space between the logo and your name */
+    border-radius: 5px; /* Optional: Make the logo slightly rounded */
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: #e0e0e0; /* Light grey hero background */
+    padding: 5rem 0;
+    text-align: center; /* Center align text in hero section */
+}
+
+#hero .container {
+    display: flex;
+    flex-direction: column; /* Stack content and image vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+}
+
+#hero .hero-content {
+    margin-bottom: 2rem;
+    display: flex;         /* Make hero-content a flex container */
+    flex-direction: column; /* Stack content vertically within hero-content */
+    align-items: center;    /* Center items horizontally within hero-content */
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero .container.hero-grid {
+    display: grid; /* Enable CSS Grid Layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px; /* Spacing between columns */
+    align-items: center; /* Vertically align items in grid */
+}
+
+.hero-image {
+    text-align: center; /* Center the image within its container */
+}
+
+.hero-image img {
+    max-width: 100%; /* Image takes up to 100% of its container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+/* style.css - Style for hero buttons container */
+.hero-buttons {
+    display: flex;        /*Arrange buttons horizontally */
+    gap: 1.0em;           /* Spacing between buttons */
+    justify-content: flex-start; /* Align buttons to the start */
+    margin-top: 1.5em;    /* Space above buttons from text */
+}
+
+/* style.css - Adjust cta-button for text and icon, and add zoom hover */
+.cta-button {
+    display: inline-flex;    /* Use flexbox for text and icon alignment */
+    align-items: center;    /* Vertically align text and icon in button */
+    padding: 0.8em 1.2em;    /* Adjust padding as needed */
+    font-size: 1em;         /* Adjust font size if needed */
+    text-decoration: none;  /* Remove underlines from button links */
+    border-radius: 0.5em;   /* Rounded corners for buttons */
+    background-color: #f0f0f0; /* Example button background color - adjust to your theme */
+    color: #333;             /* Example button text color - adjust to your theme */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+}
+
+.cta-button:hover {
+    transform: scale(1.1);  /* Zoom effect on hover - adjust scale value if needed */
+    background-color: #e0e0e0; /* Example: slightly lighter background on hover */
+}
+
+.cta-button i { /* Style the icon inside cta-button */
+    margin-left: 0.5em;     /* Space between text and icon */
+    font-size: 0.9em;       /* Adjust icon size relative to button text */
+}
+
+/* Optional: Specific styling for LinkedIn button if needed */
+/* .linkedin-button {
+    /* You can add specific styles for LinkedIn button here, e.g., different background color */
+
+
+/* Optional: Specific styling for GitHub button if needed */
+/* .github-button {
+    /* You can add specific styles for GitHub button here, e.g., different background color */
+
+
+
+/* Project section -------------------------- */
+
+#projects h2, #resume h2, #contact h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 4rem 0;
+    background-color: #f0f0f0; /* Slightly lighter grey for projects section */
+}
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: hsl(var(--primary)); /* Use primary color from template variables */
+    border-radius: 0.5em; /* Rounded corners */
+    color: hsl(0, 0%, 5%); /* White text color */
+    padding: 1.5rem; /* Padding inside the card */
+    width: 300px;      /* Fixed width for now, adjust later if needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow f*/
+
+    display: flex;          /* Enable Flexbox for project card */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* style.css - Modified CSS for project skills tags to look more like "floating blocks" */
+
+.project-skills {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin-top: 1rem; /* Add some space above the skills list */
+    display: flex; /* Arrange skills horizontally */
+    flex-wrap: wrap; /* Allow skills to wrap to the next line */
+    justify-content: flex-start; /* Align skills to the start (left) */
+}
+
+.project-skills li {
+    background-color: #f0f0f0; /*  Slightly lighter grey background for skill tags - adjust if needed */
+    color: #333; /* Dark grey text for skills */
+    padding: 0.5rem 1rem; /*  Slightly more padding to make blocks bigger */
+    border-radius: 7px; /*  Slightly more rounded corners for skill tags */
+    margin: 0.3rem 0.5rem 0.3rem 0; /*  Adjusted margins for better spacing between blocks */
+    font-size: 0.9rem; /* Slightly smaller font size for skills */
+    border: 1px solid #ccc; /*  Added a subtle border to define the blocks more clearly */
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.05); /*  Subtle shadow to give a "floating" effect */
+}
+
+/* style.css - Add within "Projects Section Styles" or at the end */
+
+/* Glassmorphism Button Styles for Project Cards */
+
+.project-details-btn { /* Targeting the container div of the button */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make button take full width of project card */
+    height: 50px; /* Adjust button height if needed */
+    margin-top: 1.5rem; /* Add some space above the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-details-btn a { /* Targeting the anchor link inside the button div */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05); /* Glassmorphism background */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Bottom border highlight */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Top border highlight */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none; /* Remove underline from link */
+    overflow: hidden;
+    color: #333; /* White text color */
+    font-weight: 400; /* Adjust font weight if needed */
+    z-index: 1;
+    transition: 0.5s; /* Smooth transition for hover effects */
+    backdrop-filter: blur(15px); /* Glassmorphism blur effect */
+}
+
+.project-details-btn:hover a {
+    letter-spacing: 3px; /* Increased letter spacing on hover */
+}
+
+.project-details-btn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent); /* Highlight overlay */
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+}
+
+.project-details-btn:hover a::before {
+    transform: skewX(45deg) translate(200px); /* Slide highlight on hover */
+}
+
+.project-details-btn::before,
+.project-details-btn::after { /* For the "light-up" effect - common styles */
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px; /* Start hidden below */
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.15s; /* Delay for synchronized effect */
+}
+
+.project-details-btn:hover::before { /* "Light-up" effect on hover (bottom) */
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.project-details-btn::after { /* "Light-up" effect - common styles */
+    top: 5px;
+}
+
+.project-details-btn:hover::after { /* "Light-up" effect on hover (top) */
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+/* Color variations for buttons - if you want different colors for each button, you can use these,
+   or you can set a default color for all buttons */
+
+.project-card:nth-child(1) .project-details-btn::before,
+.project-card:nth-child(1) .project-details-btn::after {
+    background: #ff1f71; /* Pink/Red color for 1st project button */
+    box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
+}
+
+.project-card:nth-child(2) .project-details-btn::before,
+.project-card:nth-child(2) .project-details-btn::after {
+    background: #2db2ff; /* Blue color for 2nd project button */
+    box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
+}
+
+.project-card:nth-child(3) .project-details-btn::before,
+.project-card:nth-child(3) .project-details-btn::after {
+    background: #1eff45; /* Green color for 3rd project button */
+    box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45, 0 0 60px #1eff45;
+}
+
+
+
+/* style.css - Contact Section Styling (based on image) */
+
+#contact {
+    background-color: #f0f0f0;
+}
+
+#contact .contact-container {
+    text-align: center; /* Center align text within the container */
+    padding: 2em;      /* Add some padding around the content */
+    color: #e0e0e0;
+}
+
+#contact h2 {
+    margin-bottom: 0.5em; /* Space below "Contact Me" heading */
+    color: #333;         /* Darker heading color (adjust if needed) */
+}
+
+#contact p {
+    margin-bottom: 1.5em; /* Space below the paragraph */
+    line-height: 1.6;   /* Improve paragraph readability */
+    color: #555;         /* Slightly darker paragraph color */
+}
+
+#contact p a {
+    color: #007bff;     /* Link color (adjust to your theme) */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#contact p a:hover {
+    text-decoration: underline; /* Add underline on hover for link */
+}
+
+.contact-form {
+    max-width: 500px;   /* Limit form width */
+    margin: 0 auto;      /* Center the form horizontally */
+    text-align: left;    /* Align form elements to the left */
+}
+
+.form-group {
+    margin-bottom: 1.5em; /* Space between form groups (label + input/textarea) */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky; /* Stick footer to the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 768px) {
+    /* Styles for screens smaller than 768px (tablets and phones) */
+    header .container {
+        flex-direction: column; /* Stack header content vertically on small screens */
+        text-align: center; /* Center align header text on small screens */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation links vertically on small screens */
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #hero {
+        padding: 3rem 0; /* Reduce padding in hero section on small screens */
+    }
+
+    #hero h1 {
+        font-size: 2rem; /* Reduce hero heading size on small screens */
+    }
+
+    .container {
+        padding: 15px; /* Reduce container padding on small screens */
+    }
+
+    /* Adjust project grid to be single column on very small screens if needed */
+    #projects .projects-grid {
+        grid-template-columns: 1fr; /* Single column project grid on very small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #hero .container.hero-grid {
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+        text-align: center; /* Center align content on smaller screens */
+    }
+
+    #hero .hero-content {
+        text-align: center; /* Center align text in hero content on smaller screens */
+    }
+
+    .hero-image {
+        margin-bottom: 20px; /* Add space below image when stacked on top on smaller screens */
+    }
+}
