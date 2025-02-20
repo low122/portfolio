@@ -168,7 +168,7 @@ header nav ul li a:hover {
 }
 
 .project-card {
-    background-color: hsl(var(--primary)); /* Use primary color from template variables */
+    background-color: rgba(170, 170, 170, 0.3); /* Use primary color from template variables */
     border-radius: 0.5em; /* Rounded corners */
     color: hsl(0, 0%, 5%); /* White text color */
     padding: 1.5rem; /* Padding inside the card */
@@ -179,6 +179,13 @@ header nav ul li a:hover {
     flex-direction: column; /* Arrange content vertically */
     justify-content: space-between;
     border-radius: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* ADD THIS LINE */
+    /* You might have other hover styles here - keep them */
 }
 
 .project-card h3 {
@@ -206,7 +213,7 @@ header nav ul li a:hover {
 }
 
 .project-skills li {
-    background-color: #f0f0f0; /*  Slightly lighter grey background for skill tags - adjust if needed */
+    background-color: #ffffff; /*  Slightly lighter grey background for skill tags - adjust if needed */
     color: #333; /* Dark grey text for skills */
     padding: 0.5rem 1rem; /*  Slightly more padding to make blocks bigger */
     border-radius: 7px; /*  Slightly more rounded corners for skill tags */
@@ -214,6 +221,12 @@ header nav ul li a:hover {
     font-size: 0.9rem; /* Slightly smaller font size for skills */
     border: 1px solid #ccc; /*  Added a subtle border to define the blocks more clearly */
     box-shadow: 2px 2px 3px rgba(0,0,0,0.05); /*  Subtle shadow to give a "floating" effect */
+
+    transition: transform 0.3s ease;
+}
+
+.project-skills li:hover {
+    transform: translateY(-3px); /* ADD THIS LINE */
 }
 
 /* style.css - Add within "Projects Section Styles" or at the end */
@@ -257,6 +270,7 @@ header nav ul li a:hover {
 
 .project-details-btn:hover a {
     letter-spacing: 3px; /* Increased letter spacing on hover */
+
 }
 
 .project-details-btn a::before {
